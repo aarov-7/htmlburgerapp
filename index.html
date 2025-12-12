@@ -1,96 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        html {
-            background-color: #f0ffe6;
-        }
-        .topbar {
-            width: 33%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f0ffe6;
-        }
-        .topbar img {
-            width: 50px;
-            height: auto;
-        }
-        .menu-btn {
-            background: #96fcd5;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            width: 60px;
-            padding-right: 5px;
-        }
-        .bigpic img {
-            width: 33%;
-        }
-        .container {
-            width: 33%;
-            display: flex;
-            padding-bottom: 5px;
-            gap: 5px;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    html {
+        background-color: #f0ffe6;
+    }
+
+    body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topbar {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #f0ffe6;
+        padding: 10px 0;
+    }
+
+    .topbar img {
+        width: 50px;
+        height: auto;
+    }
+
+    .menu-btn {
+        background: #96fcd5;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .logo img {
+        width: 60px;
+        padding-right: 5px;
+    }
+
+    .bigpic img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        margin: 8px 0;
+    }
+
+    .section-title {
+        background-color: lightgray;
+        border-style: solid;
+        border-radius: 10px;
+        border-width: 1px;
+        padding: 5px 10px;
+        width: fit-content;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .box {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 220px;
+        background-color: lightgray;
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .box-text {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .box h1 {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .box p {
+        font-size: 12px;
+        margin: 2px 0 0 0;
+        color: #333;
+    }
+
+    .thumb {
+        height: 70px;
+        width: 70px;
+        border-radius: 15%;
+        border: 1px solid black;
+        object-fit: cover;
+    }
+
+    .add-btn {
+        margin-top: 5px;
+        padding: 4px 8px;
+        background-color: #96fcd5;
+        border: none;
+        border-radius: 8px;
+        font-size: 12px;
+        cursor: pointer;
+        align-self: flex-start;
+    }
+
+    @media (max-width: 500px) {
         .box {
-            width: 300px;
-            height: 70px;
-            background-color: lightgray;
-            border: 1px solid black;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 5px;
+            flex: 1 1 100%;
         }
-        .box-text {
-            display: flex;
-            flex-direction: column;
-        }
-        .box h1 {
-            font-size: 18px;
-            margin: 0;
-        }
-        .box p {
-            font-size: 12px;
-            margin: 2px 0 0 0;
-            color: #333;
-        }
+
         .thumb {
-            height: 70px;
-            width: 70px;
-            border-radius: 15%;
-            border: 1px solid black;
-            object-fit: cover;
+            width: 55px;
+            height: 55px;
         }
-        .add-btn {
-            margin-top: 5px;
-            padding: 4px 8px;
-            background-color: #96fcd5;
-            border: none;
-            border-radius: 8px;
-            font-size: 12px;
-            cursor: pointer;
-            align-self: flex-start;
+
+        .box h1 {
+            font-size: 15px;
         }
-        h1 {
-            margin-left: 0;
+
+        .box p {
+            font-size: 11px;
         }
-        @media (min-width: 600px) {
-            .container {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .box{
-                width: 45%;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
+
 <body>
 
     <div class="topbar">
@@ -106,21 +155,22 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/The_Giant_hamburger%2C_fries_and_soda_-_Quick.jpg">
     </div>
 
-    <h1 style="margin: 3px; background-color: lightgray; border-style: solid; border-radius: 10px; border-width: 1px; width: 7%;">Burgers</h1>
+    <h1 class="section-title">Burgers</h1>
 
     <div class="container">
         <div class="box">
             <img class="thumb" src="https://freerangestock.com/sample/87448/hamburger-with-lettuce-and-tomatoes-on-plate.jpg">
             <div class="box-text">
-                <h1>Hamburger   $5.00</h1>
+                <h1>Hamburger</h1>
                 <p>Regular burger with lettuce onions pickles ketchup and mayonaise</p>
                 <button class="add-btn">Add to Cart</button>
             </div>
         </div>
+
         <div class="box">
             <img class="thumb" src="https://cdn12.picryl.com/photo/2016/12/31/cheeseburger-hamburger-cheese-food-drink-0ec358-1024.jpg">
             <div class="box-text">
-                <h1>Cheeseburger   $5.50</h1>
+                <h1>Cheeseburger</h1>
                 <p>Classic cheeseburger with cheese onion pickles ketchup and mayonaise</p>
                 <button class="add-btn">Add to Cart</button>
             </div>
@@ -131,36 +181,38 @@
         <div class="box">
             <img class="thumb" src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg4MTk4NjUtaW1hZ2Uta3d2dXkxMjUuanBn.jpg">
             <div class="box-text">
-                <h1>Bacon Burger   $6.50</h1>
+                <h1>Bacon Burger</h1>
                 <p>Burger with bacon cheese and bbq-sauce</p>
                 <button class="add-btn">Add to Cart</button>
             </div>
         </div>
+
         <div class="box">
             <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/e/e0/%D7%94%D7%9E%D7%91%D7%95%D7%A8%D7%92%D7%A8_%D7%98%D7%91%D7%A2%D7%95%D7%A0%D7%99.jpg">
             <div class="box-text">
-                <h1>Vegan Burger   $6.00</h1>
+                <h1>Vegan Burger</h1>
                 <p>Burger with a juicy soy patty vegan cheese lettuce and ketchup</p>
                 <button class="add-btn">Add to Cart</button>
             </div>
         </div>
     </div>
 
-    <h1 style="margin: 3px; background-color: lightgray; border-style: solid; border-radius: 10px; border-width: 1px; width: 14%;">Sides & Desserts</h1>
+    <h1 class="section-title">Sides & Desserts</h1>
 
     <div class="container">
         <div class="box">
             <img class="thumb" src="https://images.pexels.com/photos/4109234/pexels-photo-4109234.jpeg">
             <div class="box-text">
-                <h1>Fries   $3.50</h1>
+                <h1>Fries</h1>
                 <p>Crispy and fully french fries fried in peanut oil</p>
                 <button class="add-btn">Add to Cart</button>
             </div>
         </div>
+
         <div class="box">
             <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Foster_Farms_breast_nuggets_frozen.JPG">
             <div class="box-text">
-                <h1>Nuggets   $4.00</h1>
+                <h1>Nuggets</h1>
                 <p>Crunchy and tender chicken nuggets fried in peanut oil</p>
                 <button class="add-btn">Add to Cart</button>
             </div>
@@ -171,15 +223,16 @@
         <div class="box">
             <img class="thumb" src="https://www.cookipedia.co.uk/wiki/images/1/19/Prawn_balls.jpg">
             <div class="box-text">
-                <h1>Chili-Cheese Bites   $4.50</h1>
+                <h1>Chili-Cheese Bites</h1>
                 <p>Spice chili and cheese inside of a cripsy breading fried in peanut oil</p>
                 <button class="add-btn">Add to Cart</button>
             </div>
         </div>
+
         <div class="box">
             <img class="thumb" src="https://cdn12.picryl.com/photo/2016/12/31/onion-rings-breaded-deep-fried-food-drink-31073f-1024.jpg">
             <div class="box-text">
-                <h1>Onion Rings   $3.75</h1>
+                <h1>Onion Rings</h1>
                 <p>Rings of onion battered and fried in peanut oil</p>
                 <button class="add-btn">Add to Cart</button>
             </div>
@@ -188,3 +241,4 @@
 
 </body>
 </html>
+
