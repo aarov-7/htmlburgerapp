@@ -1,144 +1,147 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <style>
+            html {
+                background-color: #f0ffe6;
+            }
 
-<style>
-    html {
-        background-color: #f0ffe6;
-    }
+            body {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
 
-    body {
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+            .topbar {
+                width: 100%;
+                max-width: 500px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #f0ffe6;
+                padding: 10px 0;
+            }
 
-    .topbar {
-        width: 100%;
-        max-width: 500px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: #f0ffe6;
-        padding: 10px 0;
-    }
+            .topbar img {
+                width: 12vw;
+                max-width: 50px;
+                height: auto;
+            }
 
-    .topbar img {
-        width: 50px;
-        height: auto;
-    }
+            .menu-btn {
+                background: #96fcd5;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                padding: 5px;
+            }
 
-    .menu-btn {
-        background: #96fcd5;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        padding: 5px;
-    }
+            .logo img {
+                width: 14vw;
+                max-width: 60px;
+                padding-right: 5px;
+            }
 
-    .logo img {
-        width: 60px;
-        padding-right: 5px;
-    }
+            .bigpic img {
+                width: 100%;
+                max-width: 500px;
+                border-radius: 10px;
+            }
 
-    .bigpic img {
-        width: 100%;
-        max-width: 500px;
-        border-radius: 10px;
-    }
+            h1 {
+                margin: 8px 0;
+            }
 
-    h1 {
-        margin: 8px 0;
-    }
+            .section-title {
+                background-color: lightgray;
+                border-style: solid;
+                border-radius: 10px;
+                border-width: 1px;
+                padding: 5px 10px;
+                width: fit-content;
+            }
 
-    .section-title {
-        background-color: lightgray;
-        border-style: solid;
-        border-radius: 10px;
-        border-width: 1px;
-        padding: 5px 10px;
-        width: fit-content;
-    }
+            .container {
+                width: 100%;
+                max-width: 500px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
 
-    .container {
-        width: 100%;
-        max-width: 500px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 10px;
-    }
+            .box {
+                flex: 1 1 100%;
+                min-height: 90px;
+                background-color: lightgray;
+                border: 1px solid black;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+            }
 
-    .box {
-        flex: 1 1 calc(50% - 10px);
-        min-width: 220px;
-        background-color: lightgray;
-        border: 1px solid black;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 5px;
-    }
+            .box-text {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
 
-    .box-text {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-    }
+            .box h1 {
+                font-size: 4vw;
+                margin: 0;
+            }
 
-    .box h1 {
-        font-size: 16px;
-        margin: 0;
-    }
+            .box p {
+                font-size: 3vw;
+                margin: 4px 0 0 0;
+                color: #333;
+            }
 
-    .box p {
-        font-size: 12px;
-        margin: 2px 0 0 0;
-        color: #333;
-    }
+            .thumb {
+                width: 18vw;
+                height: 18vw;
+                max-width: 70px;
+                max-height: 70px;
+                border-radius: 15%;
+                border: 1px solid black;
+                object-fit: cover;
+            }
 
-    .thumb {
-        height: 70px;
-        width: 70px;
-        border-radius: 15%;
-        border: 1px solid black;
-        object-fit: cover;
-    }
+            .add-btn {
+                margin-top: 6px;
+                padding: 5px 10px;
+                background-color: #96fcd5;
+                border: none;
+                border-radius: 8px;
+                font-size: 12px;
+                cursor: pointer;
+                align-self: flex-start;
+            }
 
-    .add-btn {
-        margin-top: 5px;
-        padding: 4px 8px;
-        background-color: #96fcd5;
-        border: none;
-        border-radius: 8px;
-        font-size: 12px;
-        cursor: pointer;
-        align-self: flex-start;
-    }
+            @media (min-width: 600px) {
+                .box {
+                    flex: 1 1 calc(50% - 10px);
+                }
 
-    @media (max-width: 500px) {
-        .box {
-            flex: 1 1 100%;
-        }
+                .box h1 {
+                    font-size: 16px;
+                }
 
-        .thumb {
-            width: 55px;
-            height: 55px;
-        }
+                .box p {
+                    font-size: 12px;
+                }
 
-        .box h1 {
-            font-size: 15px;
-        }
+                .thumb {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
 
-        .box p {
-            font-size: 11px;
-        }
-    }
-</style>
-</head>
+        </style>
+    </head>
 
 <body>
 
